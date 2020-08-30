@@ -48,12 +48,12 @@ a:focus {
   z-index: 99999;
 }
 #main-slider {
-  background-image: url(../assets/slider-bg.jpg);
+  background-image: url(../assets/slider-bg.png);
   background-attachment: fixed;
   background-size: cover;
   background-position: 50% 50%;
   background-repeat: no-repeat;
-  padding: 200px 0;
+  padding: 300px 0;
   color: #fff;
 }
 #main-slider .item {
@@ -121,8 +121,8 @@ a:focus {
   color: #fff;
 }
 #contact .box {
-  background-color: #222;
-  color: #999;
+  background-color: #78BEAA;
+  color: #78BEAA;
 }
 #contact .box h1,
 #contact .box h2,
@@ -155,7 +155,7 @@ a:focus {
 }
 .box {
   padding: 50px 30px;
-  background: #fff;
+  background: #53AC91;
   border-bottom: 1px solid #e9e9e9;
   position: relative;
 }
@@ -373,6 +373,7 @@ a:focus {
 .carousel.scale .right-arrow {
   top: 30%;
   position: absolute;
+  color: white;
 }
 .carousel.scale .left-arrow {
   left: -10px;
@@ -459,13 +460,13 @@ a:focus {
   color: #fff;
 }
 .navbar-default {
-  background: #fff;
-  border-radius: 0 0 5px 5px;
+  background: #7CC0AC;
+  border-radius: 0 0 10px 10px;
   border: 0;
   padding: 0;
   -webkit-box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
   -moz-box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
-  box-shadow: 0 1px 3px 0 rgba(0,0,0,.2);
+  box-shadow: 0 3px 6px 0 rgba(0,0,0,.2);
   overflow: hidden;
 }
 .navbar-default .first a {
@@ -476,16 +477,16 @@ a:focus {
   margin-left: 20px;
   width: 200px;
   height: 78px;
-  background: url(../assets/logo.png) no-repeat 0 50%;
+  background: url(../assets/logo.png)  width: 20px no-repeat 0 50%;
 }
 .navbar-default .navbar-nav > li {
   margin-left: 1px;
 }
 .navbar-default .navbar-nav > li > a {
   padding: 30px 25px;
-  font-size: 16px;
-  line-height: 18px;
-  color: #999;
+  font-size: 24px;
+  line-height: 50px;
+  color: white;
 }
 .navbar-default .navbar-nav > li > a > i {
   display: inline-block;
