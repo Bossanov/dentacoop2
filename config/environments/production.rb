@@ -85,7 +85,12 @@ Rails.application.configure do
     logger.formatter = config.log_formatter
     config.logger    = ActiveSupport::TaggedLogging.new(logger)
   end
+Rails.application.configure do
 
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "dentacoop2.herokuapp.com" }
+  # or your custom domain name eg. "www.yourdomain.com"
+end
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 

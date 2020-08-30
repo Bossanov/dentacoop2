@@ -225,23 +225,37 @@
                         <h1>Nous contacter</h1>
                         <p>Pour plus d'informations , remplissez ce formulaire !</p>
                         <div class="status alert alert-success" style="display: none"></div>
+                        <% @contact = Contact.new  %>
+                        <%= simple_form_for @contact do |f| %>
                         <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name" style="background-color: #e3f4ef">
+
+                                        <%= f.input :name, :required => true, type:"text", name:"name", placeholder:"Nom-Prénom",input_html: { class:"form-control", style:"background-color: #e3f4ef"} %>
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address" style="background-color: #e3f4ef ">
+
+                                        <%= f.input :mail, :required => true, type:"text", name:"mail", placeholder:"Votre Email",input_html: { class:"form-control", style:"background-color: #e3f4ef"} %>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message" style="background-color: #e3f4ef"></textarea>
+
+                                        <%= f.input :choix, :required => true, type:"text", name:"choix", collection:["Chirurgien-Dentiste", "Laboratoire ou représentant", "Association", "Autres"], prompt: "Vous êtes", label:false, input_html: { class:"form-control", style:"   background-color:  #e3f4ef;"} %>
+                                    </div>
+
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-sm-12">
+                                    <div class="form-group">
+
+                                        <%= f.input :message, :as => :text,:required => true, type:"text", name:"mail", placeholder:"Votre message", input_html: { class:"form-control", style:"background-color: #e3f4ef;min-height:150px "} %>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-danger btn-lg">Envoyer</button>
@@ -249,6 +263,7 @@
                                 </div>
                             </div>
                         </form>
+                        <%end%>
                     </div><!--/.col-sm-6-->
                     <div class="col-sm-6">
                        <!-- <h1>Notre adresse</h1>
